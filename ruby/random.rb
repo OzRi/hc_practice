@@ -6,4 +6,4 @@ def random_group(num)
   p members - selected_members
 end
 
-[1, 2].sample == 1 ? random_group(2) : random_group(3)
+random_group([2, 3].sample)
