@@ -3,10 +3,10 @@
 require 'date'
 require 'optparse'
 
-def calender_header(day)
-  first_day = Date.new(day.year, day.month, 1)
+def calender_header(date)
+  first_day = Date.new(date.year, date.month, 1)
   first_day_wday = first_day.wday
-  puts day.strftime('%m月 %Y').center(20)
+  puts date.strftime('%m月 %Y').center(20)
   puts '月 火 水 木 金 土 日'
   print '   ' * (first_day_wday.zero? ? 6 : first_day_wday - 1)
 end
