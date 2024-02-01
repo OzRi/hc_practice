@@ -1,8 +1,13 @@
 # frozen_string_literal: true
 
+require_relative 'name_service'
+
 # pokemonクラス
 class Pokemon
-  attr_reader :name
+  include NameService
+
+  attr_reader :type1, :type2
+  attr_accessor :name
 
   def initialize(name, type1, type2, hit_point)
     @name = name
